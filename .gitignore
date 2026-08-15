@@ -8,10 +8,12 @@ lex.yy.c
 *.out
 *.exe
 a.out
-q1
-q2
-q3
-q4
+
+# Ignorar apenas os executáveis das questões 
+/AT1/q1/q1
+/AT1/q2/q2
+/AT1/q3/q3
+/AT1/q4/q4
 
 # Arquivos temporários e do sistema
 .DS_Store
