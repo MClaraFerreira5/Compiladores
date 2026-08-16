@@ -67,7 +67,7 @@ flex q2.l
 gcc lex.yy.c -o q2
 
 # 3. Executar redirecionando a entrada
-./q2 < entrada.txt
+./q2 
 ```
 
 ### 📌 Questão 4 (Leitura de Arquivo via Argumento)

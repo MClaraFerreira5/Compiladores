@@ -19,8 +19,9 @@ PONTUACAO [.,;:!\?]
 
 %%
 
-\n {linhas++; caracteres += yyleng;}
+\r?\n {linhas++; caracteres += yyleng;}
 {FLOAT} {floats++; caracteres += yyleng;}
+\r          { /* ignora \r avulso para nao inflar a contagem */ }
 {INTEIRO} {inteiros++; caracteres += yyleng;}  
 {PALAVRA} {palavras++; caracteres += yyleng;}
 {PONTUACAO} {pontuacoes++; caracteres += yyleng;}
