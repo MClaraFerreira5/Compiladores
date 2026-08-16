@@ -30,6 +30,22 @@ int yywrap() {
 }
 
 int main() {
+    FILE *f_in = fopen("entrada.txt", "r");
+    if (!f_in) {
+        fprintf(stderr, "Erro ao abrir o arquivo entrada.txt\n");
+        return 1;
+    }
+
+    FILE *f_out = fopen("saida.txt", "w");
+    if (!f_out) {
+        fprintf(stderr, "Erro ao criar o arquivo saida.txt\n");
+        fclose(f_in);
+        return 1;
+    }
+    yyin = f_in;
+    stdout = f_out;
     yylex();
+    fclose(f_in);
+    fclose(f_out);
     return 0;
 }

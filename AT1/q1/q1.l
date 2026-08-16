@@ -33,13 +33,36 @@ int yywrap() {
 }
 
 int main() {
+    FILE *f_in = fopen("entrada.txt", "r");
+    if (!f_in) {
+        fprintf(stderr, "Erro ao abrir o arquivo entrada.txt\n");
+        return 1;
+    }
+
+    FILE *f_out = fopen("saida.txt", "w");
+    if (!f_out) {
+        fprintf(stderr, "Erro ao criar o arquivo saida.txt\n");
+        fclose(f_in);
+        return 1;
+    }
+
+    yyin = f_in;
     yylex();
-    printf("Linhas: %d\n", linhas);
-    printf("Palavras: %d\n", palavras);
-    printf("Caracteres: %d\n", caracteres);
-    printf("Inteiros: %d\n", inteiros);
-    printf("Floats: %d\n", floats);
-    printf("Pontuações: %d\n", pontuacoes);
+
+    if (caracteres > 0 && (linhas == 0 || yyleng > 0)) {
+        linhas++;
+    }
+
+
+    fprintf(f_out, "Linhas: %d\n", linhas);
+    fprintf(f_out, "Palavras: %d\n", palavras);
+    fprintf(f_out, "Caracteres: %d\n", caracteres);
+    fprintf(f_out, "Inteiros: %d\n", inteiros);
+    fprintf(f_out, "Floats: %d\n", floats);
+    fprintf(f_out, "Pontuacoes: %d\n", pontuacoes);
+
+    fclose(f_in);
+    fclose(f_out);
 
     return 0;
 }

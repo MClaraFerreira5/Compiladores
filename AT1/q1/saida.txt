@@ -1,6 +1,6 @@
-Linhas: 1
+Linhas: 2
 Palavras: 10
 Caracteres: 53
 Inteiros: 1
 Floats: 1
-Pontuações: 3
+Pontuacoes: 3

@@ -17,8 +17,8 @@ NUMERO {DIGITO}+(\.{DIGITO}+)?
 "while" { printf("WHILE\n"); }
 "return" { printf("RETURN\n"); }
 
-{ID} printf("ID %s\n", yytext);
-{NUMERO} printf("NUMBER %s\n", yytext);
+{ID}        { printf("ID %s\n", yytext); }
+{NUMERO}    { printf("NUMBER %s\n", yytext); }
 
 [ \t\r\n]+ {}
 
@@ -42,11 +42,18 @@ int main(int argc, char **argv) {
         exit(2);
     }
 
+    FILE *f_out = fopen("saida.txt", "w");
+    if (!f_out) {  
+        
+        fprintf(stderr, "Erro: Nao foi possivel criar o arquivo de saida 'saida.txt'.\n");
+        fclose(arquivo);
+        exit(3);
+    }
     yyin = arquivo;
-    
+    stdout = f_out;
     yylex();
 
     fclose(arquivo);
-    
+    fclose(f_out);
     return 0;
 }
