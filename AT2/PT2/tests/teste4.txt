@@ -1,0 +1,10 @@
+inicio
+#coment Comentario de linha simples
+{--- 
+Comentario de bloco 
+em multiplas linhas 
+---}
+se [x == 1] faz {
+    mostre('OK')$
+}
+fim

@@ -1,0 +1,6 @@
+inicio
+booleano teste$
+se [a <= b && c >= d || e != f] faz {
+    teste = x == y$
+}
+fim

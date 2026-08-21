@@ -1,0 +1,4 @@
+inicio
+inteiro a & b$
+real v = 10,5,2$
+fim

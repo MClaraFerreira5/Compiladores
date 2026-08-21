@@ -1,0 +1,114 @@
+SIMBOLO 
+ID fn
+ID calcular_media
+SIMBOLO (
+ID nota1
+SIMBOLO :
+ID f64
+SIMBOLO ,
+ID nota2
+SIMBOLO :
+ID f64
+SIMBOLO )
+SIMBOLO -
+SIMBOLO >
+ID f64
+SIMBOLO {
+SIMBOLO 
+ID let
+ID media
+SIMBOLO =
+SIMBOLO (
+ID nota1
+SIMBOLO +
+ID nota2
+SIMBOLO )
+SIMBOLO /
+NUMBER 2.0
+SIMBOLO ;
+SIMBOLO 
+RETURN
+ID media
+SIMBOLO ;
+SIMBOLO 
+SIMBOLO }
+SIMBOLO 
+SIMBOLO 
+ID fn
+ID main
+SIMBOLO (
+SIMBOLO )
+SIMBOLO {
+SIMBOLO 
+ID let
+ID nome_aluno
+SIMBOLO =
+STRING Carlos
+SIMBOLO ;
+SIMBOLO 
+ID let
+ID nota_prova1
+SIMBOLO =
+NUMBER 8.5
+SIMBOLO ;
+SIMBOLO 
+ID let
+ID nota_prova2
+SIMBOLO =
+NUMBER 7.0
+SIMBOLO ;
+SIMBOLO 
+ID let
+ID aprovado
+SIMBOLO =
+ID true
+SIMBOLO ;
+SIMBOLO 
+SIMBOLO 
+ID let
+ID media_final
+SIMBOLO =
+ID calcular_media
+SIMBOLO (
+ID nota_prova1
+SIMBOLO ,
+ID nota_prova2
+SIMBOLO )
+SIMBOLO ;
+SIMBOLO 
+SIMBOLO 
+IF
+ID media_final
+SIMBOLO >
+SIMBOLO =
+NUMBER 7.0
+SIMBOLO &
+SIMBOLO &
+ID aprovado
+SIMBOLO {
+SIMBOLO 
+ID println
+SIMBOLO !
+SIMBOLO (
+STRING Aluno {} aprovado com media: {}
+SIMBOLO ,
+ID nome_aluno
+SIMBOLO ,
+ID media_final
+SIMBOLO )
+SIMBOLO ;
+SIMBOLO 
+SIMBOLO }
+ELSE
+SIMBOLO {
+SIMBOLO 
+ID println
+SIMBOLO !
+SIMBOLO (
+STRING Aluno em recuperação!
+SIMBOLO )
+SIMBOLO ;
+SIMBOLO 
+SIMBOLO }
+SIMBOLO 
+SIMBOLO }
