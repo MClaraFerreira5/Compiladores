@@ -1,0 +1,13 @@
+exemplos/ruim1.json: JSON COM ERRO
+exemplos/ruim2.json: JSON COM ERRO
+exemplos/ruim3.json: JSON COM ERRO
+exemplos/ruim4.json: JSON COM ERRO
+exemplos/ruim5.json: JSON COM ERRO
+exemplos/ruim6.json: JSON COM ERRO
+exemplos/ruim7.json: JSON COM ERRO
+exemplos/ruim8.json: JSON COM ERRO
+exemplos/valido1.json: JSON OK
+exemplos/valido2.json: JSON OK
+exemplos/valido3.json: JSON OK
+exemplos/valido4.json: JSON OK
+exemplos/valido5.json: JSON OK
